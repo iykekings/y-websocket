@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 # USER node
 RUN npm install
+COPY bin/* ./bin
 # COPY --chown=node:node . .
 EXPOSE 1234
 CMD [ "npm", "start" ]
